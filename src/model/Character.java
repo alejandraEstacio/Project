@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Character implements Serializable {
 	
 
-	public static final String DER="data/userR.png";
-	public static final String IZQ="data/userL.png";
+	public static final String RIGHT="data/userR.png";
+	public static final String LEFT="data/userL.png";
 	
 	private String image;
 		
@@ -34,10 +34,125 @@ public class Character implements Serializable {
 		reloadP();
 	}
 	
+	
+	
+	
+	public String getImage() {
+		return image;
+	}
+
+
+
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+
+
+
+	public int getLonger() {
+		return longer;
+	}
+
+
+
+
+	public void setLonger(int longer) {
+		this.longer = longer;
+	}
+
+
+
+
+	public int getWidth() {
+		return width;
+	}
+
+
+
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+
+
+
+	public int getPosX() {
+		return posX;
+	}
+
+
+
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+
+
+
+	public int getPosY() {
+		return posY;
+	}
+
+
+
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+
+
+
+	public boolean isShoot() {
+		return shoot;
+	}
+
+
+
+
+	public void setShoot(boolean shoot) {
+		this.shoot = shoot;
+	}
+
+
+
+
+	public Shooting getBullet() {
+		return bullet;
+	}
+
+
+
+
+	public void setBullet(Shooting bullet) {
+		this.bullet = bullet;
+	}
+
+
+
+
+	public static String getRight() {
+		return RIGHT;
+	}
+
+
+
+
+	public static String getLeft() {
+		return LEFT;
+	}
+
+
+
+
 	public void reloadP() {
-		if(bala.getY()<5) {
-			disparando=false;
-			bala.reloadP();
+		if(bullet.getY()<5) {
+			Shoot=false;
+			bullet.reloadP();
 		}
 	}
 	
